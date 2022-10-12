@@ -1,0 +1,179 @@
+###
+POST http://localhost:3000/farms/fill HTTP/1.1
+content-type: application/json
+
+[
+  {
+    "_id": 3,
+    "farm_name": "Hasib firm",
+    "founding_date": 3453456346,
+    "address": {
+      "province": "Iowa",
+      "city": "Fairfield",
+      "pobox": "52558"
+    },
+    "location": [
+      -91.966156,
+      41.023268
+    ],
+    "cheese_list": [
+      {
+        "cheese_id": 1,
+        "name": "String",
+        "milk_type": "String",
+        "aop_certified": true,
+        "organic": true,
+        "aged_for": 20
+      }
+    ],
+    "authorized_sellers": [
+      {
+        "seller": {
+          "name": "String",
+          "email": "String"
+        },
+        "seller_mailing_address": "String",
+        "inspections": [
+          {
+            "year": 20,
+            "grade": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": 4,
+    "farm_name": "Random firm",
+    "founding_date": 4535345,
+    "address": {
+      "province": "Iowa",
+      "city": "Ottumwa",
+      "pobox": "52557"
+    },
+    "location": [
+      -91.961607,
+      41.016728
+    ],
+    "cheese_list": [
+      {
+        "cheese_id": 1,
+        "name": "Permasian",
+        "milk_type": "Whole",
+        "aop_certified": true,
+        "organic": true,
+        "aged_for": 20
+      }
+    ],
+    "authorized_sellers": [
+      {
+        "seller": {
+          "name": "Amit",
+          "email": "s@s.com"
+        },
+        "seller_mailing_address": "Some random address",
+        "inspections": [
+          {
+            "year": 20,
+            "grade": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": 5,
+    "farm_name": "third firm",
+    "founding_date": 34563464,
+    "address": {
+      "province": "Iowa",
+      "city": "Washington",
+      "pobox": "52554"
+    },
+    "location": [
+      -91.969504,
+      41.015918
+    ],
+    "cheese_list": [
+      {
+        "cheese_id": 1,
+        "name": "Bla",
+        "milk_type": "Full ",
+        "aop_certified": true,
+        "organic": true,
+        "aged_for": 20
+      }
+    ],
+    "authorized_sellers": [
+      {
+        "seller": {
+          "name": "String",
+          "email": "String"
+        },
+        "seller_mailing_address": "String",
+        "inspections": [
+          {
+            "year": 20,
+            "grade": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": 6,
+    "farm_name": "Amit firm",
+    "founding_date": 6448,
+    "address": {
+      "province": "Iowa",
+      "city": "Mt Pleasant",
+      "pobox": "52555"
+    },
+    "location": [
+      -91.062271,
+      41.710105
+    ],
+    "cheese_list": [
+      {
+        "cheese_id": 1,
+        "name": "String",
+        "milk_type": "String",
+        "aop_certified": true,
+        "organic": true,
+        "aged_for": 20
+      }
+    ],
+    "authorized_sellers": [
+      {
+        "seller": {
+          "name": "String",
+          "email": "String"
+        },
+        "seller_mailing_address": "String",
+        "inspections": [
+          {
+            "year": 20,
+            "grade": 20
+          }
+        ]
+      }
+    ]
+  }
+]
+
+
+###
+GET http://localhost:3000/farms/near/-91.968673/41.017844
+
+###
+POST http://localhost:3000/farms/3/cheese_list
+content-type: application/json
+
+{
+  "cheese_id": 5,
+  "name": "Permasian",
+  "milk_type": "Whole",
+  "aop_certified": "true",
+  "organic": "true",
+  "aged_for": 5
+}
