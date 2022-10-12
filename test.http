@@ -1,4 +1,10 @@
 ###
+DELETE http://localhost:3000/farms/delete HTTP/1.1
+
+###
+GET  http://localhost:3000/farms
+
+###
 POST http://localhost:3000/farms/fill HTTP/1.1
 content-type: application/json
 
@@ -29,13 +35,13 @@ content-type: application/json
     "authorized_sellers": [
       {
         "seller": {
-          "name": "String",
-          "email": "String"
+          "name": "amit",
+          "email": "a@gmail.com"
         },
         "seller_mailing_address": "String",
         "inspections": [
           {
-            "year": 20,
+            "year": 2020,
             "grade": 20
           }
         ]
@@ -74,7 +80,7 @@ content-type: application/json
         "seller_mailing_address": "Some random address",
         "inspections": [
           {
-            "year": 20,
+            "year": 2020,
             "grade": 20
           }
         ]
@@ -177,3 +183,14 @@ content-type: application/json
   "organic": "true",
   "aged_for": 5
 }
+
+
+###
+PATCH http://localhost:3000/farms/4/sellers/s@s.com/inspections/2020
+Content-Type: application/json
+
+{"grade": 30}
+
+
+###
+GET http://localhost:3000/farms/search?milk_type=Whole&aop_certified=true&organic=true&aged_for=20
